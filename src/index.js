@@ -19,7 +19,7 @@ function generatePoem(event) {
     "You are a Poem expert writer of short poems. You have to generate a 4 line poem in basic HTML, please just give me the text and separate each line with a <br />. Make sure to follow the user instructions. Do not include a title to the poem.";
   let url = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
   let poemElement = document.querySelector("#poem");
-  poemElement.innerHTML = "Generating the joke. Please wait ...";
+  poemElement.innerHTML = "Generating the poem. Please wait ...";
 
   axios.get(url).then(displayPoem);
 }
